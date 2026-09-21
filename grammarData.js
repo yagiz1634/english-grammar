@@ -2,270 +2,139 @@ const grammarPool = [
   // ==========================================
   // --- UNIT 1-2: am/is/are (Present) ---
   // ==========================================
-  {
-    id: 1,
-    topic: "am/is/are",
-    level: "A1",
-    question: "My brother _____ a computer engineering student at university.",
-    options: ["is", "are", "am", "be"],
-    answer: "is",
-    translation: "Erkek kardeşim üniversitede bir bilgisayar mühendisliği öğrencisidir.",
-    explanation: "Tekil üçüncü şahıslar (he/she/it) ve tekil isimler için geniş zamanda 'to be' fiilinin 'is' hali kullanılır."
-  },
-  {
-    id: 2,
-    topic: "am/is/are",
-    level: "A1",
-    question: "_____ you interested in modern art and design?",
-    options: ["Is", "Are", "Am", "Do"],
-    answer: "Are",
-    translation: "Modern sanat ve tasarımla ilgileniyor musun?",
-    explanation: "'You' öznesi ile soru sorulurken ve ana fiil bir sıfat (interested) olduğunda başa 'Are' gelir."
-  },
-  {
-    id: 3,
-    topic: "am/is/are",
-    level: "A1",
-    question: "I _____ hungry, but I'm very thirsty.",
-    options: ["am not", "isn't", "aren't", "don't"],
-    answer: "am not",
-    translation: "Aç değilim ama çok susadım.",
-    explanation: "'I' öznesinin olumsuz to-be hali 'am not' şeklindedir."
-  },
-  {
-    id: 4,
-    topic: "am/is/are",
-    level: "A1",
-    question: "Where _____ your parents from?",
-    options: ["is", "are", "do", "does"],
-    answer: "are",
-    translation: "Annen ve baban nereli?",
-    explanation: "'Parents' (ebeveynler) çoğul bir kelime olduğu için 'they' kabul edilir ve 'are' kullanılır."
-  },
-  {
-    id: 5,
-    topic: "am/is/are",
-    level: "A1",
-    question: "It _____ very warm today. We can go outside.",
-    options: ["are", "am", "is", "be"],
-    answer: "is",
-    translation: "Bugün hava çok sıcak. Dışarı çıkabiliriz.",
-    explanation: "Hava durumu belirtilirken 'It' öznesi kullanılır ve yardımcı fiil 'is' olur."
-  },
+  { id: 1, topic: "am/is/are", level: "A1", question: "My brother _____ a computer engineering student at university.", options: ["is", "are", "am", "be"], answer: "is", translation: "Erkek kardeşim üniversitede bir bilgisayar mühendisliği öğrencisidir.", explanation: "Tekil üçüncü şahıslar (he/she/it) için 'to be' fiilinin 'is' hali kullanılır." },
+  { id: 2, topic: "am/is/are", level: "A1", question: "_____ you interested in modern art and design?", options: ["Is", "Are", "Am", "Do"], answer: "Are", translation: "Modern sanat ve tasarımla ilgileniyor musun?", explanation: "'You' öznesi ile soru sorulurken başa 'Are' gelir." },
+  { id: 3, topic: "am/is/are", level: "A1", question: "I _____ hungry, but I'm very thirsty.", options: ["am not", "isn't", "aren't", "don't"], answer: "am not", translation: "Aç değilim ama çok susadım.", explanation: "'I' öznesinin olumsuz to-be hali 'am not' şeklindedir." },
+  { id: 4, topic: "am/is/are", level: "A1", question: "Where _____ your parents from?", options: ["is", "are", "do", "does"], answer: "are", translation: "Annen ve baban nereli?", explanation: "'Parents' (ebeveynler) çoğul bir kelime olduğu için 'are' kullanılır." },
+  { id: 5, topic: "am/is/are", level: "A1", question: "It _____ very warm today. We can go outside.", options: ["are", "am", "is", "be"], answer: "is", translation: "Bugün hava çok sıcak. Dışarı çıkabiliriz.", explanation: "Hava durumu belirtilirken 'It' öznesi ve 'is' yardımcı fiili kullanılır." },
+  { id: 6, topic: "am/is/are", level: "A1", question: "My shoes _____ very dirty. I need to clean them.", options: ["is", "are", "am", "be"], answer: "are", translation: "Ayakkabılarım çok kirli. Onları temizlemem lazım.", explanation: "'Shoes' kelimesi çoğul olduğu için 'are' alır." },
+  { id: 7, topic: "am/is/are", level: "A1", question: "This hotel _____ expensive, but it's very comfortable.", options: ["aren't", "don't", "isn't", "am not"], answer: "isn't", translation: "Bu otel pahalı değil ama çok rahat.", explanation: "'This hotel' tekil (it) olduğu için olumsuzu 'isn't' olur." },
+  { id: 8, topic: "am/is/are", level: "A1", question: "_____ your father a teacher or a manager?", options: ["Is", "Are", "Does", "Do"], answer: "Is", translation: "Baban bir öğretmen mi yoksa yönetici mi?", explanation: "'Your father' (he) tekil olduğu için soru sorarken başa 'Is' gelir." },
+  { id: 9, topic: "am/is/are", level: "A1", question: "I _____ 19 years old. How old are you?", options: ["have", "am", "is", "are"], answer: "am", translation: "Ben 19 yaşındayım. Sen kaç yaşındasın?", explanation: "İngilizcede yaş söylerken 'have' (sahip olmak) değil, to-be (am/is/are) kullanılır." },
+  { id: 10, topic: "am/is/are", level: "A1", question: "Those apples _____ not very good. Don't eat them.", options: ["is", "are", "do", "does"], answer: "are", translation: "Şu elmalar çok iyi değil. Onları yeme.", explanation: "'Apples' kelimesi çoğul olduğu için 'are' yardımcı fiilini alır." },
 
   // ==========================================
   // --- UNIT 3-4: Present Continuous (I am doing) ---
   // ==========================================
-  {
-    id: 6,
-    topic: "Present Continuous",
-    level: "A1",
-    question: "Please be quiet. I _____ to write an algorithm right now.",
-    options: ["try", "am trying", "tried", "is trying"],
-    answer: "am trying",
-    translation: "Lütfen sessiz ol. Şu an bir algoritma yazmaya çalışıyorum.",
-    explanation: "'Right now' ve 'Please be quiet' gibi konuşma anını belirten durumlarda Present Continuous (am/is/are + V-ing) kullanılır."
-  },
-  {
-    id: 7,
-    topic: "Present Continuous",
-    level: "A1",
-    question: "Look! It _____ again. We can't play tennis.",
-    options: ["rains", "is raining", "rain", "raining"],
-    answer: "is raining",
-    translation: "Bak! Yine yağmur yağıyor. Tenis oynayamayız.",
-    explanation: "'Look!' (Bak!) ifadesi eylemin o an gerçekleştiğini gösterir, bu yüzden şimdiki zaman kullanılır."
-  },
-  {
-    id: 8,
-    topic: "Present Continuous",
-    level: "A1",
-    question: "Why _____ an umbrella? It's not raining.",
-    options: ["do you carry", "are you carrying", "you carry", "is you carrying"],
-    answer: "are you carrying",
-    translation: "Neden şemsiye taşıyorsun? Yağmur yağmıyor.",
-    explanation: "Şu anki (geçici) bir durumu sorarken 'Are you + V-ing' kalıbı kullanılır."
-  },
-  {
-    id: 9,
-    topic: "Present Continuous",
-    level: "A1",
-    question: "The children _____ to sleep at the moment, so turn down the TV.",
-    options: ["tries", "are trying", "is trying", "try"],
-    answer: "are trying",
-    translation: "Çocuklar şu an uyumaya çalışıyor, bu yüzden televizyonun sesini kıs.",
-    explanation: "'Children' çoğul olduğu için (they), şimdiki zamanda 'are + V-ing' alır."
-  },
+  { id: 11, topic: "Present Continuous", level: "A1", question: "Please be quiet. I _____ to write an algorithm right now.", options: ["try", "am trying", "tried", "is trying"], answer: "am trying", translation: "Lütfen sessiz ol. Şu an bir algoritma yazmaya çalışıyorum.", explanation: "'Right now' konuşma anını belirtir, Present Continuous kullanılır." },
+  { id: 12, topic: "Present Continuous", level: "A1", question: "Look! It _____ again. We can't play tennis.", options: ["rains", "is raining", "rain", "raining"], answer: "is raining", translation: "Bak! Yine yağmur yağıyor. Tenis oynayamayız.", explanation: "'Look!' ifadesi eylemin o an gerçekleştiğini gösterir." },
+  { id: 13, topic: "Present Continuous", level: "A1", question: "Why _____ an umbrella? It's not raining.", options: ["do you carry", "are you carrying", "you carry", "is you carrying"], answer: "are you carrying", translation: "Neden şemsiye taşıyorsun? Yağmur yağmıyor.", explanation: "Şu anki bir durumu sorarken 'Are you + V-ing' kalıbı kullanılır." },
+  { id: 14, topic: "Present Continuous", level: "A1", question: "The children _____ to sleep at the moment, so turn down the TV.", options: ["tries", "are trying", "is trying", "try"], answer: "are trying", translation: "Çocuklar şu an uyumaya çalışıyor, bu yüzden televizyonun sesini kıs.", explanation: "'Children' çoğul olduğu için, 'are + V-ing' alır." },
+  { id: 15, topic: "Present Continuous", level: "A1", question: "You can turn off the radio. I _____ to it.", options: ["am not listening", "don't listen", "not listening", "doesn't listen"], answer: "am not listening", translation: "Radyoyu kapatabilirsin. Onu dinlemiyorum.", explanation: "Şu an yapılan/yapılmayan bir eylemi anlattığı için 'am not listening' kullanılır." },
+  { id: 16, topic: "Present Continuous", level: "A1", question: "Where is Sarah? - She _____ a shower.", options: ["has", "is having", "having", "does have"], answer: "is having", translation: "Sarah nerede? - O (şu an) duş alıyor.", explanation: "Şu an gerçekleşen bir eylemi anlattığı için şimdiki zaman kullanılır." },
+  { id: 17, topic: "Present Continuous", level: "A1", question: "_____ they working today?", options: ["Do", "Are", "Is", "Have"], answer: "Are", translation: "Onlar bugün çalışıyorlar mı?", explanation: "Fiil -ing almış (working) ve özne 'they'. Soru kalıbı 'Are' ile başlar." },
+  { id: 18, topic: "Present Continuous", level: "A1", question: "I _____ a great book these days.", options: ["am reading", "read", "reading", "reads"], answer: "am reading", translation: "Bu günlerde harika bir kitap okuyorum.", explanation: "'These days' (bu günlerde) geçici süreçleri anlattığı için şimdiki zaman kullanılır." },
+  { id: 19, topic: "Present Continuous", level: "A1", question: "Hurry up! We _____ for you.", options: ["wait", "waits", "are waiting", "waiting"], answer: "are waiting", translation: "Acele et! Seni bekliyoruz.", explanation: "Acele edilmesi isteniyorsa eylem şu an yapılıyordur ('are waiting')." },
+  { id: 20, topic: "Present Continuous", level: "A1", question: "What _____ on the floor? Have you lost something?", options: ["are you doing", "do you do", "you do", "you doing"], answer: "are you doing", translation: "Yerde ne yapıyorsun? Bir şey mi kaybettin?", explanation: "Karşıdakinin o anki davranışını sormak için 'What are you doing?' kullanılır." },
 
   // ==========================================
   // --- UNIT 5-7: Present Simple (I do / don't / do you?) ---
   // ==========================================
-  {
-    id: 10,
-    topic: "Present Simple",
-    level: "A1",
-    question: "Alex _____ coffee in the evening; he prefers herbal tea.",
-    options: ["doesn't drink", "don't drink", "isn't drinking", "not drinks"],
-    answer: "doesn't drink",
-    translation: "Alex akşamları kahve içmez; bitki çayını tercih eder.",
-    explanation: "Geniş zaman (Present Simple) olumsuz yapısında 3. tekil şahıs (he) için 'doesn't + fiilin yalın hali (V1)' kullanılır."
-  },
-  {
-    id: 11,
-    topic: "Present Simple",
-    level: "A1",
-    question: "Where _____ your grandparents live during the winter?",
-    options: ["does", "do", "are", "is"],
-    answer: "do",
-    translation: "Büyükanne ve büyükbaban kış aylarında nerede yaşıyor?",
-    explanation: "Çoğul öznelerde (your grandparents = they) geniş zaman soru cümlesi kurarken 'do' yardımcı fiili kullanılır."
-  },
-  {
-    id: 12,
-    topic: "Present Simple",
-    level: "A1",
-    question: "My father is an architect. He _____ buildings.",
-    options: ["design", "designs", "designing", "is design"],
-    answer: "designs",
-    translation: "Babam bir mimar. O, binalar tasarlar.",
-    explanation: "Meslekler ve kalıcı gerçekler Present Simple ile ifade edilir. 'He' öznesi fiile '-s' takısı aldırır."
-  },
-  {
-    id: 13,
-    topic: "Present Simple",
-    level: "A1",
-    question: "What time _____ the banks close in Turkey?",
-    options: ["do", "does", "are", "is"],
-    answer: "do",
-    translation: "Türkiye'de bankalar saat kaçta kapanır?",
-    explanation: "'Banks' kelimesi çoğuldur (they). Bu yüzden geniş zaman soru kelimesi olarak 'do' kullanılır."
-  },
-  {
-    id: 14,
-    topic: "Present Simple",
-    level: "A1",
-    question: "I _____ go to the gym on Sundays. It's my rest day.",
-    options: ["don't", "doesn't", "am not", "not"],
-    answer: "don't",
-    translation: "Pazarları spor salonuna gitmem. O benim dinlenme günümdür.",
-    explanation: "'I' öznesi için geniş zamanda olumsuz yardımcı fiil 'don't' kelimesidir."
-  },
+  { id: 21, topic: "Present Simple", level: "A1", question: "Alex _____ coffee in the evening; he prefers herbal tea.", options: ["doesn't drink", "don't drink", "isn't drinking", "not drinks"], answer: "doesn't drink", translation: "Alex akşamları kahve içmez; bitki çayını tercih eder.", explanation: "Geniş zaman olumsuz yapısında 3. tekil şahıs için 'doesn't + V1' kullanılır." },
+  { id: 22, topic: "Present Simple", level: "A1", question: "Where _____ your grandparents live during the winter?", options: ["does", "do", "are", "is"], answer: "do", translation: "Büyükanne ve büyükbaban kış aylarında nerede yaşıyor?", explanation: "Çoğul öznelerde (your grandparents) geniş zaman sorusunda 'do' kullanılır." },
+  { id: 23, topic: "Present Simple", level: "A1", question: "My father is an architect. He _____ buildings.", options: ["design", "designs", "designing", "is design"], answer: "designs", translation: "Babam bir mimar. O, binalar tasarlar.", explanation: "Meslekler ve genel gerçekler için Present Simple kullanılır; 'He' öznesi '-s' takısı alır." },
+  { id: 24, topic: "Present Simple", level: "A1", question: "What time _____ the banks close in Turkey?", options: ["do", "does", "are", "is"], answer: "do", translation: "Türkiye'de bankalar saat kaçta kapanır?", explanation: "'Banks' çoğuldur (they). Bu yüzden soru kelimesi 'do' olur." },
+  { id: 25, topic: "Present Simple", level: "A1", question: "I _____ go to the gym on Sundays. It's my rest day.", options: ["don't", "doesn't", "am not", "not"], answer: "don't", translation: "Pazarları spor salonuna gitmem. O benim dinlenme günümdür.", explanation: "'I' öznesi için geniş zamanda olumsuz ek 'don't' kelimesidir." },
+  { id: 26, topic: "Present Simple", level: "A1", question: "The earth _____ around the sun.", options: ["go", "goes", "is going", "going"], answer: "goes", translation: "Dünya güneşin etrafında döner.", explanation: "Bilimsel gerçekler daima geniş zamanla ifade edilir." },
+  { id: 27, topic: "Present Simple", level: "A1", question: "_____ she always arrive late to the meetings?", options: ["Do", "Is", "Does", "Are"], answer: "Does", translation: "Toplantılara hep geç mi kalır?", explanation: "'She' öznesiyle geniş zaman sorusu sorarken başa 'Does' gelir." },
+  { id: 28, topic: "Present Simple", level: "A1", question: "We _____ eat meat. We are vegetarians.", options: ["doesn't", "aren't", "don't", "not"], answer: "don't", translation: "Biz et yemeyiz. Biz vejetaryeniz.", explanation: "'We' öznesi için geniş zaman olumsuzluk eki 'don't'tur." },
+  { id: 29, topic: "Present Simple", level: "A1", question: "How often _____ you play tennis?", options: ["are", "do", "does", "have"], answer: "do", translation: "Ne sıklıkla tenis oynarsın?", explanation: "Alışkanlık ve sıklık soran (How often) cümlelerde geniş zaman 'do/does' kullanılır." },
+  { id: 30, topic: "Present Simple", level: "A1", question: "It _____ a lot in Rize during the autumn.", options: ["rain", "rains", "raining", "is raining"], answer: "rains", translation: "Sonbaharda Rize'de çok yağmur yağar.", explanation: "Genel doğa olayları ve kalıcı durumlar için fiil '-s' takısı alır." },
 
   // ==========================================
-  // --- UNIT 8-9: Present Continuous vs Present Simple ---
+  // --- UNIT 8-9: Continuous vs Simple ---
   // ==========================================
-  {
-    id: 15,
-    topic: "Continuous vs Simple",
-    level: "A2",
-    question: "Water _____ at 100 degrees Celsius.",
-    options: ["is boiling", "boils", "boil", "boiled"],
-    answer: "boils",
-    translation: "Su, 100 santigrat derecede kaynar.",
-    explanation: "Bilimsel ve genel geçer gerçekler daima Present Simple (geniş zaman) ile ifade edilir."
-  },
-  {
-    id: 16,
-    topic: "Continuous vs Simple",
-    level: "A2",
-    question: "Excuse me, _____ English?",
-    options: ["are you speaking", "do you speak", "you speak", "speak you"],
-    answer: "do you speak",
-    translation: "Afedersiniz, İngilizce konuşuyor musunuz? (Biliyor musunuz?)",
-    explanation: "Bir dili bilip bilmeme durumu kalıcı bir gerçektir, bu yüzden şimdiki zaman değil geniş zaman (Do you speak) kullanılır."
-  },
-  {
-    id: 17,
-    topic: "Continuous vs Simple",
-    level: "A2",
-    question: "I _____ the answer to this math problem.",
-    options: ["am not knowing", "don't know", "doesn't know", "not know"],
-    answer: "don't know",
-    translation: "Bu matematik probleminin cevabını bilmiyorum.",
-    explanation: "'Know' (bilmek), 'want' (istemek) gibi durum (state) fiilleri genellikle 'ing' takısı almaz ve geniş zamanla kullanılır."
-  },
-  {
-    id: 18,
-    topic: "Continuous vs Simple",
-    level: "A2",
-    question: "She usually goes to work by car, but this week she _____ the bus.",
-    options: ["takes", "is taking", "take", "taking"],
-    answer: "is taking",
-    translation: "O genellikle işe arabayla gider, ama bu hafta otobüse biniyor.",
-    explanation: "Genel alışkanlıklar için Present Simple (goes), 'bu hafta' gibi geçici durumlar için Present Continuous (is taking) kullanılır."
-  },
+  { id: 31, topic: "Continuous vs Simple", level: "A2", question: "Water _____ at 100 degrees Celsius.", options: ["is boiling", "boils", "boil", "boiled"], answer: "boils", translation: "Su, 100 santigrat derecede kaynar.", explanation: "Bilimsel ve genel geçer gerçekler daima Present Simple ile ifade edilir." },
+  { id: 32, topic: "Continuous vs Simple", level: "A2", question: "Excuse me, _____ English?", options: ["are you speaking", "do you speak", "you speak", "speak you"], answer: "do you speak", translation: "Afedersiniz, İngilizce konuşuyor musunuz?", explanation: "Bir dili bilme durumu kalıcı bir gerçektir, geniş zaman kullanılır." },
+  { id: 33, topic: "Continuous vs Simple", level: "A2", question: "I _____ the answer to this math problem.", options: ["am not knowing", "don't know", "doesn't know", "not know"], answer: "don't know", translation: "Bu matematik probleminin cevabını bilmiyorum.", explanation: "'Know' (bilmek) gibi durum fiilleri -ing takısı almaz, geniş zamanla kullanılır." },
+  { id: 34, topic: "Continuous vs Simple", level: "A2", question: "She usually goes to work by car, but this week she _____ the bus.", options: ["takes", "is taking", "take", "taking"], answer: "is taking", translation: "O genellikle işe arabayla gider, ama bu hafta otobüse biniyor.", explanation: "Geçici durumlar (this week) için Present Continuous kullanılır." },
+  { id: 35, topic: "Continuous vs Simple", level: "A2", question: "I _____ this pizza. It's delicious!", options: ["love", "am loving", "loves", "loving"], answer: "love", translation: "Bu pizzaya bayılıyorum. Çok lezzetli!", explanation: "'Love, like, hate' gibi duygu fiilleri genellikle -ing takısı almaz." },
+  { id: 36, topic: "Continuous vs Simple", level: "A2", question: "Look at the chef! He _____ the soup to see if it needs salt.", options: ["tastes", "is tasting", "taste", "tasted"], answer: "is tasting", translation: "Aşçıya bak! Tuza ihtiyacı var mı diye çorbayı tadıyor.", explanation: "'Taste' eylem (tadına bakmak) anlamındaysa şimdiki zamanla (-ing) kullanılabilir." },
+  { id: 37, topic: "Continuous vs Simple", level: "A2", question: "_____ you understand what I mean?", options: ["Are", "Do", "Is", "Does"], answer: "Do", translation: "Ne demek istediğimi anlıyor musun?", explanation: "'Understand' durum fiili olduğu için geniş zaman (Do you...) ile sorulur." },
+  { id: 38, topic: "Continuous vs Simple", level: "A2", question: "I can't talk right now. I _____ dinner.", options: ["cook", "am cooking", "cooks", "cooking"], answer: "am cooking", translation: "Şu an konuşamam. Akşam yemeği pişiriyorum.", explanation: "Konuşma anında yapılan bir eylem olduğu için şimdiki zaman (am cooking) gerekir." },
+  { id: 39, topic: "Continuous vs Simple", level: "A2", question: "What _____? - I'm an engineer.", options: ["are you doing", "do you do", "you do", "are you do"], answer: "do you do", translation: "Ne iş yapıyorsun? - Ben bir mühendisim.", explanation: "Meslek sorarken 'What do you do?' (Ne yaparsın/işin ne?) kalıbı kullanılır." },
+  { id: 40, topic: "Continuous vs Simple", level: "A2", question: "I want to lose weight, so I _____ any sugar this month.", options: ["don't eat", "am not eating", "doesn't eat", "not eating"], answer: "am not eating", translation: "Kilo vermek istiyorum, bu yüzden bu ay hiç şeker yemiyorum.", explanation: "'This month' (bu ay) geçici bir diyeti/kararı anlattığı için şimdiki zaman tercih edilir." },
 
   // ==========================================
   // --- UNIT 10-12: Past Simple (was/were & did) ---
   // ==========================================
-  {
-    id: 19,
-    topic: "Past Simple",
-    level: "A2",
-    question: "They _____ at the library yesterday because the campus was closed.",
-    options: ["weren't", "wasn't", "didn't", "aren't"],
-    answer: "weren't",
-    translation: "Kampüs kapalı olduğu için dün kütüphanede değillerdi.",
-    explanation: "'They' öznesi için geçmiş zamanda durum (to-be) bildiren olumsuzluk 'were not' (weren't) şeklindedir."
-  },
-  {
-    id: 20,
-    topic: "Past Simple",
-    level: "A2",
-    question: "Did you _____ the new software update last night?",
-    options: ["install", "installed", "installing", "installs"],
-    answer: "install",
-    translation: "Dün gece yeni yazılım güncellemesini yükledin mi?",
-    explanation: "'Did' yardımcı fiiliyle geçmiş zaman sorusu sorulduğunda, cümlede asıl fiil daima yalın (V1) halde kalır."
-  },
-  {
-    id: 21,
-    topic: "Past Simple",
-    level: "A2",
-    question: "I _____ my keys this morning, so I had to call a locksmith.",
-    options: ["lose", "lost", "loosed", "did lose"],
-    answer: "lost",
-    translation: "Bu sabah anahtarlarımı kaybettim, bu yüzden çilingir çağırmak zorunda kaldım.",
-    explanation: "'Lose' fiili düzensizdir (irregular). Geçmiş zaman hali (V2) 'lost' olur."
-  },
-  {
-    id: 22,
-    topic: "Past Simple",
-    level: "A2",
-    question: "Where _____ you born?",
-    options: ["was", "did", "were", "are"],
-    answer: "were",
-    translation: "Nerede doğdun?",
-    explanation: "Doğmak eylemi İngilizce'de pasif/durum yapısında (be born) ifade edilir. 'You' için geçmiş zamanda 'were' kullanılır."
-  },
-  {
-    id: 23,
-    topic: "Past Simple",
-    level: "A2",
-    question: "We _____ to the cinema last weekend, we stayed at home.",
-    options: ["didn't go", "don't go", "didn't went", "weren't go"],
-    answer: "didn't go",
-    translation: "Geçen hafta sonu sinemaya gitmedik, evde kaldık.",
-    explanation: "Geçmiş zaman (Past Simple) olumsuz cümlelerinde eylem fiilleri için 'didn't + V1' kullanılır."
-  },
-  {
-    id: 24,
-    topic: "Past Simple",
-    level: "A2",
-    question: "What time _____ the meeting finish on Friday?",
-    options: ["do", "did", "was", "does"],
-    answer: "did",
-    translation: "Cuma günü toplantı saat kaçta bitti?",
-    explanation: "Geçmişte eylem belirten (finish) bir soruda yardımcı fiil daima 'did' olur."
-  },
-  {
-    id: 25,
-    topic: "Past Simple",
-    level: "A2",
-    question: "The bed was very uncomfortable. I _____ sleep very well.",
-    options: ["didn't", "wasn't", "don't", "couldn't"],
-    answer: "didn't",
-    translation: "Yatak çok rahatsızdı. Çok iyi uyumadım.",
-    explanation: "Geçmişteki bir eylemin (uyumak) olumsuzunu yaparken 'didn't' yardımcı fiiline ihtiyaç duyarız. ('Couldn't' da gramer olarak uysa da, temel Past Simple ünitesinde 'didn't' öne çıkarılır, burada 'didn't' doğru yanıttır)."
-  }
+  { id: 41, topic: "Past Simple", level: "A2", question: "They _____ at the library yesterday because the campus was closed.", options: ["weren't", "wasn't", "didn't", "aren't"], answer: "weren't", translation: "Kampüs kapalı olduğu için dün kütüphanede değillerdi.", explanation: "'They' öznesi için geçmiş zamanda durum bildiren olumsuzluk 'weren't' şeklindedir." },
+  { id: 42, topic: "Past Simple", level: "A2", question: "Did you _____ the new software update last night?", options: ["install", "installed", "installing", "installs"], answer: "install", translation: "Dün gece yeni yazılım güncellemesini yükledin mi?", explanation: "'Did' ile geçmiş zaman sorusu sorulduğunda, asıl fiil daima yalın (V1) halde kalır." },
+  { id: 43, topic: "Past Simple", level: "A2", question: "I _____ my keys this morning, so I had to call a locksmith.", options: ["lose", "lost", "loosed", "did lose"], answer: "lost", translation: "Bu sabah anahtarlarımı kaybettim, bu yüzden çilingir çağırmak zorunda kaldım.", explanation: "'Lose' fiili düzensizdir (irregular). Geçmiş zaman hali (V2) 'lost' olur." },
+  { id: 44, topic: "Past Simple", level: "A2", question: "Where _____ you born?", options: ["was", "did", "were", "are"], answer: "were", translation: "Nerede doğdun?", explanation: "Doğmak eylemi pasif/durum yapısında (be born) ifade edilir. 'You' için geçmişte 'were' kullanılır." },
+  { id: 45, topic: "Past Simple", level: "A2", question: "We _____ to the cinema last weekend, we stayed at home.", options: ["didn't go", "don't go", "didn't went", "weren't go"], answer: "didn't go", translation: "Geçen hafta sonu sinemaya gitmedik, evde kaldık.", explanation: "Geçmiş zaman olumsuz cümlelerinde eylem fiilleri için 'didn't + V1' kullanılır." },
+  { id: 46, topic: "Past Simple", level: "A2", question: "What time _____ the meeting finish on Friday?", options: ["do", "did", "was", "does"], answer: "did", translation: "Cuma günü toplantı saat kaçta bitti?", explanation: "Geçmişte eylem belirten (finish) bir soruda yardımcı fiil 'did' olur." },
+  { id: 47, topic: "Past Simple", level: "A2", question: "The bed was very uncomfortable. I _____ sleep very well.", options: ["didn't", "wasn't", "don't", "couldn't"], answer: "didn't", translation: "Yatak çok rahatsızdı. Çok iyi uyumadım.", explanation: "Geçmişteki bir eylemin (uyumak) olumsuzunu yaparken 'didn't' yardımcı fiili kullanılır." },
+  { id: 48, topic: "Past Simple", level: "A2", question: "Mozart _____ more than 600 pieces of music.", options: ["write", "writes", "wrote", "written"], answer: "wrote", translation: "Mozart 600'den fazla müzik eseri besteledi (yazdı).", explanation: "Geçmişte yaşamış tarihi kişilerin yaptıkları eylemler Past Simple (V2) ile anlatılır. Write -> wrote." },
+  { id: 49, topic: "Past Simple", level: "A2", question: "_____ you go out last night? - No, I was too tired.", options: ["Do", "Were", "Did", "Have"], answer: "Did", translation: "Dün gece dışarı çıktın mı? - Hayır, çok yorgundum.", explanation: "Geçmiş zamanda bir eylem (go out) sorulurken soruya 'Did' ile başlanır." },
+  { id: 50, topic: "Past Simple", level: "A2", question: "The weather _____ very good yesterday, so we went for a walk.", options: ["was", "were", "is", "did"], answer: "was", translation: "Dün hava çok iyiydi, bu yüzden yürüyüşe çıktık.", explanation: "Hava durumu (it) geçmiş zamanda durum (to-be) fiili olarak 'was' alır." },
+  // ==========================================
+  // --- UNIT 13-14: Past Continuous (I was doing) ---
+  // ==========================================
+  { id: 51, topic: "Past Continuous", level: "A2", question: "I _____ television when the phone rang.", options: ["watched", "was watching", "am watching", "watch"], answer: "was watching", translation: "Telefon çaldığında televizyon izliyordum.", explanation: "Geçmişte uzun süren bir eylem (izlemek) kısa bir eylemle (çalmak) kesildiğinde, uzun eylem için Past Continuous (was/were + V-ing) kullanılır." },
+  { id: 52, topic: "Past Continuous", level: "A2", question: "What _____ at 10 o'clock last night?", options: ["did you do", "were you doing", "you were doing", "are you doing"], answer: "were you doing", translation: "Dün gece saat 10'da ne yapıyordun?", explanation: "Geçmişte tam o an devam etmekte olan bir eylemi sorarken Past Continuous kullanılır." },
+  { id: 53, topic: "Past Continuous", level: "A2", question: "It _____ when we went out. We had to take our umbrellas.", options: ["rained", "was raining", "is raining", "rains"], answer: "was raining", translation: "Dışarı çıktığımızda yağmur yağıyordu. Şemsiyelerimizi almak zorunda kaldık.", explanation: "Geçmişteki bir andaki (dışarı çıktığımız an) arka plan durumunu/olayını anlatırken was/were + V-ing kullanılır." },
+  { id: 54, topic: "Past Continuous", level: "A2", question: "I saw you in the park yesterday. You _____ on the grass and reading a book.", options: ["sat", "were sitting", "are sitting", "sit"], answer: "were sitting", translation: "Seni dün parkta gördüm. Çimlerde oturuyor ve kitap okuyordun.", explanation: "Geçmişte belirli bir anda devam eden bir süreci betimlerken Past Continuous kullanılır." },
+  { id: 55, topic: "Past Continuous", level: "A2", question: "While I _____ home, my car broke down.", options: ["drove", "was driving", "am driving", "drive"], answer: "was driving", translation: "Eve doğru arabayla giderken arabam bozuldu.", explanation: "'While' (iken) bağlacından sonra genellikle devam eden bir süreç geldiği için Past Continuous tercih edilir." },
+  { id: 56, topic: "Past Continuous", level: "A2", question: "We _____ to the teacher, so we didn't understand the homework.", options: ["didn't listen", "weren't listening", "aren't listening", "don't listen"], answer: "weren't listening", translation: "Öğretmeni dinlemiyorduk, bu yüzden ödevi anlamadık.", explanation: "Geçmişteki bir süre boyunca yapılmayan/devam etmeyen bir eylemi anlatmak için 'weren't + V-ing' kullanılır." },
+  { id: 57, topic: "Past Continuous", level: "A2", question: "_____ he working yesterday when the manager arrived?", options: ["Did", "Was", "Were", "Does"], answer: "Was", translation: "Müdür geldiğinde o (dün) çalışıyor muydu?", explanation: "He/She/It öznelerinde geçmişte devamlılık bildiren soru yardımcı fiili 'Was'dır." },
+  { id: 58, topic: "Past Continuous", level: "A2", question: "They were waiting for the bus when the accident _____.", options: ["was happening", "happened", "happens", "happen"], answer: "happened", translation: "Kaza olduğunda otobüs bekliyorlardı.", explanation: "Devam eden eylemi (beklemeyi) kesen anlık eylemler (kazanın olması) Past Simple (V2) ile ifade edilir." },
+  { id: 59, topic: "Past Continuous", level: "A2", question: "I wasn't looking, so I _____ see the crash.", options: ["wasn't", "didn't", "don't", "couldn't"], answer: "didn't", translation: "Bakmıyordum, bu yüzden çarpışmayı görmedim.", explanation: "Görmek (see) anlık bir eylemdir; geçmiş zamanda olumsuzu 'didn't see' şeklindedir." },
+  { id: 60, topic: "Past Continuous", level: "A2", question: "She _____ a beautiful dress at the party last night.", options: ["wore", "was wearing", "wears", "is wearing"], answer: "was wearing", translation: "Dün gece partide çok güzel bir elbise giyiyordu.", explanation: "Birinin geçmişte belli bir anda ne giyiyor olduğunu (üzerinde taşıdığını) anlatırken Past Continuous kullanılır." },
+
+  // ==========================================
+  // --- UNIT 15-18: Present Perfect (I have done) ---
+  // ==========================================
+  { id: 61, topic: "Present Perfect", level: "B1", question: "I _____ my keys. I can't find them anywhere now.", options: ["lose", "lost", "have lost", "was losing"], answer: "have lost", translation: "Anahtarlarımı kaybettim. Şu an hiçbir yerde bulamıyorum.", explanation: "Geçmişte olan ama etkisi şu an devam eden (hala kayıp) olaylar için Present Perfect (have + V3) kullanılır." },
+  { id: 62, topic: "Present Perfect", level: "B1", question: "Where is Sarah? - She _____ to Italy.", options: ["has gone", "went", "has been", "is gone"], answer: "has gone", translation: "Sarah nerede? - O İtalya'ya gitti.", explanation: "Bir yere gidip henüz dönmemiş kişiler için 'has gone' kalıbı kullanılır." },
+  { id: 63, topic: "Present Perfect", level: "B1", question: "_____ you ever been to Paris?", options: ["Did", "Were", "Are", "Have"], answer: "Have", translation: "Hiç Paris'te bulundun mu (gittin mi)?", explanation: "Hayat tecrübelerini sorarken (hiç yaptın mı?) 'Have you ever...' kalıbı kullanılır." },
+  { id: 64, topic: "Present Perfect", level: "B1", question: "I haven't finished my homework _____.", options: ["already", "just", "yet", "still"], answer: "yet", translation: "Ödevimi henüz bitirmedim.", explanation: "'Yet' (henüz), Present Perfect tense'te genellikle olumsuz cümlelerin ve soruların sonunda kullanılır." },
+  { id: 65, topic: "Present Perfect", level: "B1", question: "Would you like something to eat? - No thanks, I have _____ had lunch.", options: ["yet", "just", "ever", "lately"], answer: "just", translation: "Bir şeyler yemek ister misin? - Hayır teşekkürler, daha demin (kısa süre önce) öğle yemeği yedim.", explanation: "'Just' (hemen şimdi / az önce) yeni tamamlanmış eylemleri vurgular." },
+  { id: 66, topic: "Present Perfect", level: "B1", question: "Don't forget to pay the internet bill. - I have _____ paid it.", options: ["yet", "already", "ever", "since"], answer: "already", translation: "İnternet faturasını ödemeyi unutma. - Ben onu çoktan ödedim.", explanation: "Beklenenden daha önce tamamlanmış işler için 'already' (çoktan) kullanılır." },
+  { id: 67, topic: "Present Perfect", level: "B1", question: "_____ it stopped raining yet?", options: ["Did", "Is", "Has", "Does"], answer: "Has", translation: "Yağmur henüz durdu mu?", explanation: "'It' öznesiyle Present Perfect sorusu sorarken başa 'Has' yardımcı fiili gelir." },
+  { id: 68, topic: "Present Perfect", level: "B1", question: "I've bought a new car. _____ you want to see it?", options: ["Are", "Do", "Have", "Did"], answer: "Do", translation: "Yeni bir araba aldım. Onu görmek ister misin?", explanation: "İlk cümle Present Perfect olsa da, 'istemek' (want) geniş zaman sorusudur, 'Do you want' ile sorulur." },
+  { id: 69, topic: "Present Perfect", level: "B1", question: "We have known each other _____ we were children.", options: ["for", "since", "from", "ago"], answer: "since", translation: "Biz çocukluğumuzdan beri birbirimizi tanıyoruz.", explanation: "Geçmişte eylemin başladığı net bir noktayı/zamanı belirtirken 'since' (-den beri) kullanılır." },
+  { id: 70, topic: "Present Perfect", level: "B1", question: "This is the first time I _____ a sports car.", options: ["drive", "drove", "have driven", "am driving"], answer: "have driven", translation: "Bu, benim bir spor arabayı ilk sürüşüm.", explanation: "'This is the first time...' (Bu ilk defa...) kalıbından sonra her zaman Present Perfect Tense kullanılır." },
+  { id: 71, topic: "Present Perfect", level: "B1", question: "He hasn't called me _____ Tuesday.", options: ["since", "for", "in", "at"], answer: "since", translation: "Salı gününden beri beni aramadı.", explanation: "Salı günü başlangıç noktası olduğu için 'since' kullanılır." },
+  { id: 72, topic: "Present Perfect", level: "B1", question: "Where is Tom? - He has _____ left. You missed him by a minute.", options: ["already", "just", "yet", "still"], answer: "just", translation: "Tom nerede? - Daha yeni çıktı. Onu bir dakikayla kaçırdın.", explanation: "Eylemin çok kısa bir süre önce olduğunu vurgulamak için 'just' kullanılır." },
+  { id: 73, topic: "Present Perfect", level: "B1", question: "They _____ lived here all their lives.", options: ["have", "has", "are", "did"], answer: "have", translation: "Tüm hayatları boyunca burada yaşadılar.", explanation: "'They' öznesi ile Present Perfect yardımcı fiili 'have' olur." },
+  { id: 74, topic: "Present Perfect", level: "B1", question: "_____ you ever eaten sushi?", options: ["Did", "Were", "Have", "Do"], answer: "Have", translation: "Hiç suşi yedin mi?", explanation: "Deneyim soran 'ever' yapısı 'Have/Has' ile başlar." },
+  { id: 75, topic: "Present Perfect", level: "B1", question: "She _____ never travelled by plane.", options: ["have", "has", "is", "was"], answer: "has", translation: "O hiç uçakla seyahat etmedi.", explanation: "'She' öznesi için 'has' kullanılır. 'Never' cümleye zaten olumsuzluk katar." },
+
+  // ==========================================
+  // --- UNIT 19: for / since / ago ---
+  // ==========================================
+  { id: 76, topic: "for/since/ago", level: "B1", question: "I have been working at this company _____ six months.", options: ["since", "for", "ago", "in"], answer: "for", translation: "Altı aydır bu şirkette çalışıyorum.", explanation: "'Six months' (altı ay) bir süreç/zaman dilimi olduğu için 'for' (-dır/-dir) kullanılır." },
+  { id: 77, topic: "for/since/ago", level: "B1", question: "It hasn't rained _____ April.", options: ["since", "for", "ago", "from"], answer: "since", translation: "Nisan ayından beri yağmur yağmadı.", explanation: "Nisan (April) net bir başlangıç noktası olduğu için 'since' kullanılır." },
+  { id: 78, topic: "for/since/ago", level: "A2", question: "He left the office ten minutes _____.", options: ["since", "for", "ago", "before"], answer: "ago", translation: "O, on dakika önce ofisten ayrıldı.", explanation: "Geçmiş zaman (Past Simple) ile bitmiş süreyi belirtirken cümlenin sonunda 'ago' (önce) kullanılır." },
+  { id: 79, topic: "for/since/ago", level: "B1", question: "We have been married _____ twenty years.", options: ["since", "for", "ago", "during"], answer: "for", translation: "Biz yirmi yıldır evliyiz.", explanation: "'Twenty years' toplam geçen süreyi bildirdiği için 'for' kullanılır." },
+  { id: 80, topic: "for/since/ago", level: "B1", question: "I haven't seen him _____ we graduated from university.", options: ["since", "for", "ago", "when"], answer: "since", translation: "Üniversiteden mezun olduğumuzdan beri onu görmedim.", explanation: "'Since' bağlacından sonra, eylemin başladığı noktayı belirten tam bir geçmiş zaman cümlesi (we graduated) gelebilir." },
+
+  // ==========================================
+  // --- UNIT 20: Present Perfect vs Past Simple ---
+  // ==========================================
+  { id: 81, topic: "Perfect vs Past Simple", level: "B1", question: "_____ you see the news on TV last night?", options: ["Have", "Did", "Were", "Are"], answer: "Did", translation: "Dün gece televizyonda haberleri izledin mi?", explanation: "'Last night' (dün gece) zamanı bitmiş bir eylemdir; Present Perfect değil, Past Simple (Did) gerektirir." },
+  { id: 82, topic: "Perfect vs Past Simple", level: "B1", question: "I _____ that movie three times in my life.", options: ["saw", "have seen", "see", "am seeing"], answer: "have seen", translation: "Hayatım boyunca o filmi üç kez izledim.", explanation: "Hayat boyunca edinilen deneyimler ve sayılar (üç kez), şu ana kadar olan süreci kapsadığı için Present Perfect ile verilir." },
+  { id: 83, topic: "Perfect vs Past Simple", level: "B1", question: "William Shakespeare _____ many famous plays.", options: ["writes", "has written", "wrote", "is writing"], answer: "wrote", translation: "William Shakespeare birçok ünlü oyun yazdı.", explanation: "Geçmişte yaşamış ve ölmüş kişilerin eylemleri artık devam edemeyeceği için Past Simple (V2) ile anlatılır." },
+  { id: 84, topic: "Perfect vs Past Simple", level: "B1", question: "My brother is a writer. He _____ many books and is writing a new one now.", options: ["wrote", "has written", "writes", "write"], answer: "has written", translation: "Erkek kardeşim bir yazardır. O, birçok kitap yazdı ve şu an yenisini yazıyor.", explanation: "Kişi hayattaysa ve hala kitap yazma eylemini sürdürme ihtimali varsa Present Perfect kullanılır." },
+  { id: 85, topic: "Perfect vs Past Simple", level: "B1", question: "What time _____ you arrive at the hotel yesterday?", options: ["have", "did", "were", "do"], answer: "did", translation: "Dün otele saat kaçta vardın?", explanation: "'What time' ve 'yesterday' ile kesin bir zaman sorulduğu için sadece Past Simple (did) kullanılır." },
+  { id: 86, topic: "Perfect vs Past Simple", level: "B1", question: "I lost my key yesterday, but I _____ it now.", options: ["found", "have found", "find", "was finding"], answer: "have found", translation: "Anahtarımı dün kaybettim ama şimdi onu buldum.", explanation: "Dün kaybedilmesi geçmişte kaldı (lost), ancak şu an bulunmuş olması (etkisi sürüyor) Present Perfect (have found) gerektirir." },
+  { id: 87, topic: "Perfect vs Past Simple", level: "B1", question: "Did you go to Spain _____?", options: ["just", "already", "last year", "since 2020"], answer: "last year", translation: "Geçen yıl İspanya'ya gittin mi?", explanation: "'Did' ile sorulan geçmiş zaman (Past Simple) cümlesinde zaman zarfı olarak 'last year' gibi bitmiş bir zaman kullanılır." },
+  { id: 88, topic: "Perfect vs Past Simple", level: "B1", question: "I _____ never played golf in my entire life.", options: ["have", "am", "was", "did"], answer: "have", translation: "Tüm hayatım boyunca hiç golf oynamadım.", explanation: "Kişisel yaşam tecrübeleri geçmişten bugüne uzandığı için 'have + V3' kullanılır." },
+  { id: 89, topic: "Perfect vs Past Simple", level: "B1", question: "Albert Einstein _____ the theory of relativity.", options: ["has developed", "develops", "developed", "is developing"], answer: "developed", translation: "Albert Einstein görelilik teorisini geliştirdi.", explanation: "Tarihte kalmış figürler ve onların icatları/keşifleri daima Past Simple (V2) ile anlatılır." },
+  { id: 90, topic: "Perfect vs Past Simple", level: "B1", question: "We _____ in this house since 2015, and we love it.", options: ["lived", "live", "have lived", "are living"], answer: "have lived", translation: "2015'ten beri bu evde yaşıyoruz ve onu çok seviyoruz.", explanation: "'Since' ile başlayan, geçmişte başlayıp bugün devam eden süreçler Present Perfect gerektirir." },
+
+  // ==========================================
+  // --- UNIT 21-22: Passive (is done / was done) ---
+  // ==========================================
+  { id: 91, topic: "Passive Voice", level: "B1", question: "Butter _____ from cow's milk.", options: ["makes", "is making", "is made", "made"], answer: "is made", translation: "Tereyağı, inek sütünden yapılır.", explanation: "Genel bir gerçeği edilgen (Passive) olarak anlatırken 'am/is/are + V3' kalıbı kullanılır." },
+  { id: 92, topic: "Passive Voice", level: "B1", question: "The office _____ every day by the cleaning staff.", options: ["cleans", "is cleaned", "is cleaning", "cleaned"], answer: "is cleaned", translation: "Ofis her gün temizlik personeli tarafından temizlenir.", explanation: "'Every day' (her gün) düzenli yapılan edilgen bir eylemi anlattığı için Present Simple Passive (is cleaned) seçilir." },
+  { id: 93, topic: "Passive Voice", level: "B1", question: "This house _____ in 1990 by my grandfather.", options: ["builds", "built", "is built", "was built"], answer: "was built", translation: "Bu ev 1990 yılında büyükbabam tarafından inşa edildi.", explanation: "Geçmişteki belirli bir tarihte yapılan edilgen eylemler Past Simple Passive (was/were + V3) ile ifade edilir." },
+  { id: 94, topic: "Passive Voice", level: "B1", question: "The classroom window _____ yesterday by some children playing football.", options: ["broke", "is broken", "was broken", "breaks"], answer: "was broken", translation: "Sınıfın penceresi dün futbol oynayan bazı çocuklar tarafından kırıldı.", explanation: "'Yesterday' olduğu için geçmiş zaman, cam kendiliğinden kırılamayacağı için de edilgen çatı (was broken) kullanılır." },
+  { id: 95, topic: "Passive Voice", level: "B1", question: "How _____ these English words pronounced?", options: ["do", "did", "are", "have"], answer: "are", translation: "Bu İngilizce kelimeler nasıl telaffuz edilir?", explanation: "Kelimenin telaffuz edilmesi edilgen (passive) bir eylemdir. 'Words' çoğul olduğu için başa 'are' gelir." },
+  { id: 96, topic: "Passive Voice", level: "B1", question: "Many accidents _____ by careless drivers on this road every year.", options: ["cause", "caused", "are caused", "were caused"], answer: "are caused", translation: "Bu yolda her yıl dikkatsiz sürücüler tarafından birçok kazaya sebep olunur.", explanation: "'Every year' olduğu için Present Simple, kazalara sebep 'olunduğu' için Passive (are caused) seçilir." },
+  { id: 97, topic: "Passive Voice", level: "B1", question: "My car is at the mechanic. It _____ repaired right now.", options: ["is", "is being", "has been", "was"], answer: "is being", translation: "Arabam tamircide. Şu an tamir ediliyor.", explanation: "Şu an devam eden edilgen bir eylemi (Present Continuous Passive) anlatırken 'am/is/are + being + V3' kalıbı kullanılır." },
+  { id: 98, topic: "Passive Voice", level: "B1", question: "Two hundred people _____ employed by the new tech company last month.", options: ["are", "have", "were", "was"], answer: "were", translation: "Geçen ay yeni teknoloji şirketi tarafından iki yüz kişi işe alındı.", explanation: "'Last month' ve çoğul özne (people) birleştiğinde geçmiş zaman edilgen yardımcı fiili 'were' olur." },
+  { id: 99, topic: "Passive Voice", level: "B1", question: "I couldn't use the printer because it _____ used by the manager.", options: ["is", "is being", "was being", "has been"], answer: "was being", translation: "Yazıcıyı kullanamadım çünkü o an müdür tarafından kullanılıyordu.", explanation: "Geçmişte belli bir anda devam etmekte olan edilgen bir olayı anlatırken 'was/were + being + V3' kullanılır." },
+  { id: 100, topic: "Passive Voice", level: "B1", question: "The results of the university exams _____ announced tomorrow.", options: ["will be", "are", "were", "have been"], answer: "will be", translation: "Üniversite sınavlarının sonuçları yarın açıklanacak.", explanation: "Gelecekte yapılacak edilgen (Passive) eylemler için 'will be + V3' kalıbı kullanılır." },
 ];
