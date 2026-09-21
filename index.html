@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Grammar Engine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Sol Panel: Konu Seçimi -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Gramer Konuları</h2>
+        <p class="sidebar-hint">Başlığa tıkla: <b>Solo Mod</b><br>Kutuyu seç: <b>Havuza Ekle</b></p>
+      </div>
+      <div id="topic-container" class="topic-list"></div>
+    </aside>
+
+    <!-- Ana Test Alanı -->
+    <main class="content-area">
+      <!-- İstatistik Göstergesi -->
+      <div class="stats-panel">
+        <div class="stat-item total">Çözülen Soru: <span id="stat-total">0</span></div>
+        <div class="stat-divider">|</div>
+        <div class="stat-item correct">Doğru: <span id="stat-correct">0</span></div>
+        <div class="stat-divider">|</div>
+        <div class="stat-item wrong">Yanlış: <span id="stat-wrong">0</span></div>
+      </div>
+
+      <!-- Soru Kartı -->
+      <div class="quiz-card">
+        <div class="card-meta">
+          <span id="badge-level" class="badge level">A1</span>
+          <span id="badge-topic" class="badge topic">am/is/are</span>
+        </div>
+
+        <div id="question-text" class="question-text">Soru hazırlanıyor...</div>
+
+        <div id="options-box" class="options-container"></div>
+
+        <!-- Öğretici Kural Alanı -->
+        <div id="feedback-card" class="feedback-card hidden">
+          <div class="feedback-title">📖 Kural Açıklaması</div>
+          <p id="explanation-text"></p>
+          
+          <!-- Gizli Çeviri Bölümü -->
+          <div class="translation-wrapper">
+            <button id="toggle-trans-btn" class="trans-btn" onclick="toggleTranslation()">🇹🇷 Türkçe Çeviriyi Göster</button>
+            <p id="translation-text" class="translation-box hidden"></p>
+          </div>
+        </div>
+
+        <button id="next-button" class="next-btn hidden" onclick="sonrakiSoruyaGec()">Sonraki Soru →</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="grammarData.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
