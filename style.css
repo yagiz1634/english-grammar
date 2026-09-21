@@ -1,0 +1,54 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+body { background: #0b1329; color: #f1f5f9; height: 100vh; overflow: hidden; }
+
+.app-layout { display: flex; width: 100vw; height: 100vh; }
+
+/* Sidebar */
+.sidebar { width: 330px; background: #131c38; border-right: 1px solid #1e293b; display: flex; flex-direction: column; }
+.sidebar-header { padding: 24px 20px 16px; border-bottom: 1px solid #1e293b; }
+.sidebar-header h2 { font-size: 1.15rem; color: #38bdf8; font-weight: 600; margin-bottom: 6px; }
+.sidebar-hint { font-size: 0.78rem; color: #94a3b8; line-height: 1.4; }
+.sidebar-hint b { color: #cbd5e1; }
+.topic-list { flex: 1; overflow-y: auto; padding: 12px; }
+
+.topic-row { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 8px; margin-bottom: 6px; cursor: pointer; transition: background 0.15s ease; }
+.topic-row:hover { background: #1e2942; }
+.topic-row input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; accent-color: #38bdf8; }
+.topic-title { flex: 1; font-size: 0.88rem; user-select: none; color: #cbd5e1; }
+.topic-title.active-solo { color: #38bdf8; font-weight: bold; }
+
+/* Ana Alan & İstatistik */
+.content-area { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px; position: relative; }
+.stats-panel { position: absolute; top: 24px; display: flex; align-items: center; gap: 12px; background: #131c38; padding: 8px 18px; border-radius: 20px; border: 1px solid #1e293b; font-size: 0.85rem; }
+.stat-divider { color: #334155; }
+.stat-item.total { color: #94a3b8; }
+.stat-item.correct { color: #22c55e; font-weight: 600; }
+.stat-item.wrong { color: #ef4444; font-weight: 600; }
+
+/* Soru Kartı */
+.quiz-card { background: #131c38; width: 100%; max-width: 620px; border-radius: 14px; padding: 32px; border: 1px solid #1e293b; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+.card-meta { display: flex; gap: 8px; margin-bottom: 20px; }
+.badge { font-size: 0.75rem; padding: 3px 10px; border-radius: 12px; font-weight: 600; }
+.badge.level { background: #2563eb; color: #fff; }
+.badge.topic { background: #0369a1; color: #e0f2fe; }
+
+.question-text { font-size: 1.25rem; font-weight: 500; line-height: 1.5; margin-bottom: 24px; color: #f8fafc; }
+.options-container { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 20px; }
+.opt-btn { background: #1e2942; border: 1px solid #334155; color: #e2e8f0; padding: 14px 18px; border-radius: 8px; font-size: 0.98rem; text-align: left; cursor: pointer; transition: 0.15s ease; }
+.opt-btn:hover:not(:disabled) { background: #2b3959; border-color: #38bdf8; }
+.opt-btn.correct { background: #15803d !important; border-color: #22c55e !important; color: #fff; }
+.opt-btn.wrong { background: #b91c1c !important; border-color: #ef4444 !important; color: #fff; }
+
+/* Öğretici Geri Bildirim & Çeviri */
+.feedback-card { background: #0b1329; border: 1px solid #1e293b; border-left: 4px solid #38bdf8; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+.feedback-title { font-size: 0.82rem; font-weight: bold; color: #38bdf8; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+#explanation-text { font-size: 0.92rem; line-height: 1.5; color: #cbd5e1; }
+
+.translation-wrapper { margin-top: 14px; padding-top: 12px; border-top: 1px dashed #1e293b; }
+.trans-btn { background: transparent; border: 1px solid #334155; color: #94a3b8; font-size: 0.8rem; padding: 6px 12px; border-radius: 6px; cursor: pointer; transition: 0.15s; }
+.trans-btn:hover { background: #1e2942; color: #f1f5f9; border-color: #475569; }
+.translation-box { margin-top: 10px; font-size: 0.9rem; color: #38bdf8; background: #131c38; padding: 10px; border-radius: 6px; line-height: 1.4; }
+
+.next-btn { width: 100%; background: #38bdf8; color: #0b1329; border: none; padding: 14px; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background 0.15s; }
+.next-btn:hover { background: #0284c7; color: #fff; }
+.hidden { display: none !important; }
